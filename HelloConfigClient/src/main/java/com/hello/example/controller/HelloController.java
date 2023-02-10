@@ -18,6 +18,7 @@ public class HelloController {
 
 	@GetMapping("/hello")
 	public ResponseEntity<String> getHello(Model model) {	
-		return new ResponseEntity<String>( env.getProperty("message"), HttpStatus.OK);
+		System.out.println("**********"+env.getProperty("msg"));
+		return new ResponseEntity<String>( env.getProperty("msg"), HttpStatus.OK);
 	}
 }
